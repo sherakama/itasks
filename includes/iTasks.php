@@ -73,7 +73,7 @@ function itasks_form_install_configure_form_alter(&$form, $form_state) {
  * @param  [type] &$form_state [description]
  * @return [type]              [description]
  */
-function itasks_form_install_configure_form_alter_validate($form, &$form_state) {
+function itasks_form_install_configure_form_alter_validate(&$form, &$form_state) {
   itasks_includes();
   $engine = new TaskEngine($form_state['build_info']['args'][0]['profile_info'], $form_state['build_info']['args'][0]);
   $engine->getConfigureFormValidate($form, $form_state);
@@ -86,7 +86,7 @@ function itasks_form_install_configure_form_alter_validate($form, &$form_state) 
  * @param  [type] &$form_state [description]
  * @return [type]              [description]
  */
-function itasks_form_install_configure_form_alter_submit($form, &$form_state) {
+function itasks_form_install_configure_form_alter_submit(&$form, &$form_state) {
   itasks_includes();
   $engine = new TaskEngine($form_state['build_info']['args'][0]['profile_info'], $form_state['build_info']['args'][0]);
   $engine->getConfigureFormSubmit($form, $form_state);

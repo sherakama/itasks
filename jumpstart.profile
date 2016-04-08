@@ -45,6 +45,24 @@ function jumpstart_install_verify_requirements(&$install_state) {
  *
  * Allows the profile to alter the site configuration form.
  */
-function jumpstart_form_install_configure_form_alter(&$form, $form_state) {
+function jumpstart_form_install_configure_form_alter(&$form, &$form_state) {
   itasks_form_install_configure_form_alter($form, $form_state);
+  $form["#validate"][] = "jumpstart_form_install_configure_form_alter_validate";
+  $form["#submit"][] = "jumpstart_form_install_configure_form_alter_submit";
+}
+
+/**
+ * @param $form
+ * @param $form_state
+ */
+function jumpstart_form_install_configure_form_alter_validate(&$form, &$form_state) {
+  itasks_form_install_configure_form_alter_validate($form, $form_state);
+}
+
+/**
+ * @param $form
+ * @param $form_state
+ */
+function jumpstart_form_install_configure_form_alter_submit(&$form, &$form_state) {
+  itasks_form_install_configure_form_alter_submit($form, $form_state);
 }
