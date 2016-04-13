@@ -283,8 +283,10 @@ class TaskEngine {
     );
 
     foreach ($groups as $groupName => $tasks) {
-      foreach ($tasks as $machineName => $task) {
-        $task->validate($form, $form_state);
+      if (is_array($tasks)) {
+          foreach ($tasks as $machineName => $task) {
+          $task->validate($form, $form_state);
+        }
       }
     }
   }
@@ -306,8 +308,10 @@ class TaskEngine {
     );
 
     foreach ($groups as $groupName => $tasks) {
-      foreach ($tasks as $machineName => $task) {
-        $task->submit($form, $form_state);
+      if (is_array($tasks)) {
+        foreach ($tasks as $machineName => $task) {
+          $task->submit($form, $form_state);
+        }
       }
     }
   }
