@@ -4,7 +4,7 @@ version = 7.x-5.0-dev
 core = 7.x
 
 ; ITasks Config
-taskdir = sites/all/tasks
+taskdir = sites/all/libraries/tasks
 
 ; Install Tasks
 ; ------------------------------------------------------------------------------
