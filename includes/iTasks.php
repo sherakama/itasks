@@ -10,7 +10,7 @@
 function itasks_includes() {
 
   // Things take a long time to run. Lets try to up the limit.
-  ini_set('max_execution_time', 300); //300 seconds = 5 minutes
+  ini_set('max_execution_time', 360); //360 seconds = 6 minutes
 
   require_once dirname(__FILE__) . "/InstallTaskInterface.php";
   require_once dirname(__FILE__) . "/AbstractTask.php";
@@ -32,7 +32,6 @@ function itasks_form_install_configure_form_alter(&$form, $form_state) {
   // Find out what other groups we have.
   $engine = new TaskEngine($form_state['build_info']['args'][0]['profile_info'], $form_state['build_info']['args'][0]);
   $tasks = $engine->getTasks();
-
 
   // Get rid of the default ones.
   unset($tasks["install"]);
@@ -261,4 +260,3 @@ function itasks_install_finished() {
   // Flush all caches.
   drupal_flush_all_caches();
 }
-

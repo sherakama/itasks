@@ -12,7 +12,7 @@ require_once dirname(__FILE__) . "/includes/loader.php";
  * @param  [type] &$install_state [description]
  * @return [type]                 [description]
  */
-function jumpstart_install_tasks(&$install_state) {
+function itasks_profile_install_tasks(&$install_state) {
   return itasks_install_tasks($install_state);
 }
 
@@ -23,7 +23,7 @@ function jumpstart_install_tasks(&$install_state) {
  * over the original verify_requirements function so that we can add additional
  * dependencies to the veryify check before executing it.
  */
-function jumpstart_install_tasks_alter(&$tasks, &$install_state) {
+function itasks_profile_install_tasks_alter(&$tasks, &$install_state) {
   itasks_install_tasks_alter($tasks, $install_state);
 }
 
@@ -35,7 +35,7 @@ function jumpstart_install_tasks_alter(&$tasks, &$install_state) {
  *
  * @param $install_state
  */
-function jumpstart_install_verify_requirements(&$install_state) {
+function itasks_profile_install_verify_requirements(&$install_state) {
   itasks_install_verify_requirements($install_state);
 }
 
@@ -45,17 +45,17 @@ function jumpstart_install_verify_requirements(&$install_state) {
  *
  * Allows the profile to alter the site configuration form.
  */
-function jumpstart_form_install_configure_form_alter(&$form, &$form_state) {
+function itasks_profile_form_install_configure_form_alter(&$form, &$form_state) {
   itasks_form_install_configure_form_alter($form, $form_state);
-  $form["#validate"][] = "jumpstart_form_install_configure_form_alter_validate";
-  $form["#submit"][] = "jumpstart_form_install_configure_form_alter_submit";
+  $form["#validate"][] = "itasks_profile_form_install_configure_form_alter_validate";
+  $form["#submit"][] = "itasks_profile_form_install_configure_form_alter_submit";
 }
 
 /**
  * @param $form
  * @param $form_state
  */
-function jumpstart_form_install_configure_form_alter_validate(&$form, &$form_state) {
+function itasks_profile_form_install_configure_form_alter_validate(&$form, &$form_state) {
   itasks_form_install_configure_form_alter_validate($form, $form_state);
 }
 
@@ -63,7 +63,7 @@ function jumpstart_form_install_configure_form_alter_validate(&$form, &$form_sta
  * @param $form
  * @param $form_state
  */
-function jumpstart_form_install_configure_form_alter_submit(&$form, &$form_state) {
+function itasks_profile_form_install_configure_form_alter_submit(&$form, &$form_state) {
 
   // Force the pass through of all the variables when installing through the UI.
   if (isset($form_state["build_info"]["args"][0]["interactive"]) && $form_state["build_info"]["args"][0]["interactive"]) {

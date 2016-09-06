@@ -13,7 +13,6 @@ abstract class AbstractTask {
 
   // Constructor
   // ---------------------------------------------------------------------------
-
   public function __construct() {}
 
   // Methods
@@ -58,6 +57,5 @@ abstract class AbstractTask {
   public function setMachineName($name) {
     $this->machineName == $name;
   }
-
 
 }

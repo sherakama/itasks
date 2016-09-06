@@ -7,6 +7,6 @@
 /**
  * Implements hook_install_finished.
  */
-function jumpstart_install_finished() {
+function itasks_profile_install_finished() {
   itasks_install_finished();
 }
