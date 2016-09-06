@@ -46,8 +46,8 @@ task[mamp][install][] = Environment\MAMP\Install\GeneralSettings
 
 dependencies[] = itasks_update
 
-; task[update][7100] = Drupal\Standard\Update\SiteName
-; task[update][7101] = Drupal\Standard\Update\SiteName
+; task[update][7100] = Drupal\Standard\Update\Example
+; task[update][7101] = Drupal\Standard\Update\Example
 
 ; Dependencies
 ; ------------------------------------------------------------------------------
