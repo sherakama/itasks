@@ -1,17 +1,12 @@
-#[Stanford Module](https://github.com/SU-SWS/stanford_module)
+#[iTasks Update](https://github.com/sherakama/itasks)
 ##### Version: 7.x-1.x
 
-Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)
+Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)  
 [Changelog.txt](CHANGELOG.txt)
 
-The Stanford Module feature is used to ...
+This module provides the `drush ipdb` command.
+This module is used for executing the itasks updates.
 
-
-Sub Modules
----
-
-**[Stanford Module Sub Module](https://github.com/SU-SWS/stanford_module)**
-This module provides the Stanford Person entity reference field. By default an instance of this field is created on Stanford Publications but it may be added to other content types.
 
 Installation
 ---
@@ -22,6 +17,10 @@ Configuration
 ---
 
 Nothing special needed.
+
+Creating and running update tasks:
+---
+
 
 Troubleshooting
 ---
